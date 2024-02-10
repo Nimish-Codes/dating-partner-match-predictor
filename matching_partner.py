@@ -27,7 +27,7 @@ def get_user_info():
         "ethnicity": ethnicity
     }
 
-def get_partner_info():
+def get_partner_info(prefix=""):
     agep = st.slider("Age", 18, 100, step=1)
     statusp = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
     sexp = st.selectbox(prefix + "Sex", ["Male", "Female"])
