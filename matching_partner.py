@@ -74,16 +74,18 @@ def main():
     
     st.write("\nNow provide your partner's information:")
     user2_info = get_partner_info("partner's")
-    
-    match_percentage = calculate_match(user1_info, user2_info)
-    st.write(f"\nMatch Percentage: {match_percentage:.2f}%")
 
-    if match_percentage < 51:
-      st.error("Have mercy on your life, run away and find another partner.")
-    if match_percentage > 50:
-      st.write("Get along.")
-    if match_percentage == 100:
-      st.write("A divine match.")
+    if st.button("Let's see"):
+    
+        match_percentage = calculate_match(user1_info, user2_info)
+        st.write(f"\nMatch Percentage: {match_percentage:.2f}%")
+
+        if match_percentage < 51:
+          st.error("Have mercy on your life, run away and find another partner.")
+        for match_percentage in range(51, 99):
+          st.write("Get along.")
+        if match_percentage == 100:
+          st.success("A divine match. 36=36 :-)")
 
 if __name__ == "__main__":
     main()
