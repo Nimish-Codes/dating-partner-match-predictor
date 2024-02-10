@@ -27,7 +27,7 @@ def get_user_info():
         "ethnicity": ethnicity
     }
 
-def get_partner_info(prefix=""):
+def get_partner_info():
     agep = st.slider("Age", 18, 100, step=1)
     statusp = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
     sexp = st.selectbox(prefix + "Sex", ["Male", "Female"])
@@ -73,7 +73,7 @@ def main():
     user1_info = get_user_info()
     
     st.write("\nNow provide your partner's information:")
-    user2_info = get_partner_info("Partner's ")
+    user2_info = get_partner_info()
     
     match_percentage = calculate_match(user1_info, user2_info)
     st.write(f"\nMatch Percentage: {match_percentage:.2f}%")
