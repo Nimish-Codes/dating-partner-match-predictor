@@ -28,30 +28,30 @@ def get_user_info():
     }
 
 def get_partner_info(prefix=""):
-    age = st.slider("Age", 18, 100, step=1)
-    status = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
-    sex = st.selectbox(prefix + "Sex", ["Male", "Female"])
-    education = st.selectbox(prefix + "Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
-    orientation = st.selectbox(prefix + "Orientation", ["Straight", "Gay", "Lesbian", "Bisexual"])
-    body_type = st.selectbox(prefix + "Body Type", ["Average", "Fit", "Athletic", "Thin", "Curvy", "Fatty", "Hamburger"])
-    diet = st.selectbox(prefix + "Diet", ["Only Veg", "Only Non-Veg", "Mostly Veg", "Mostly Non-Veg", "Mixed Balanced"])
-    diet_routine = st.selectbox(prefix + "Diet Routine", ["Anytime", "Strictly Timed"])
-    drinks_alcohol = st.selectbox(prefix + "Drinks Alcohol", ["Never", "Sometimes", "With friends or party only", "Often", "Regular"])
-    drugs = st.selectbox(prefix + "Drugs", ["Never", "Sometimes", "Regular"])
-    ethnicity = st.selectbox(prefix + "Ethnicity", ["White", "Black", "Asian", "Indian"])
+    agep = st.slider("Age", 18, 100, step=1)
+    statusp = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
+    sexp = st.selectbox(prefix + "Sex", ["Male", "Female"])
+    educationp = st.selectbox(prefix + "Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
+    orientationp = st.selectbox(prefix + "Orientation", ["Straight", "Gay", "Lesbian", "Bisexual"])
+    body_typep = st.selectbox(prefix + "Body Type", ["Average", "Fit", "Athletic", "Thin", "Curvy", "Fatty", "Hamburger"])
+    dietp = st.selectbox(prefix + "Diet", ["Only Veg", "Only Non-Veg", "Mostly Veg", "Mostly Non-Veg", "Mixed Balanced"])
+    diet_routinep = st.selectbox(prefix + "Diet Routine", ["Anytime", "Strictly Timed"])
+    drinks_alcoholp = st.selectbox(prefix + "Drinks Alcohol", ["Never", "Sometimes", "With friends or party only", "Often", "Regular"])
+    drugsp = st.selectbox(prefix + "Drugs", ["Never", "Sometimes", "Regular"])
+    ethnicityp = st.selectbox(prefix + "Ethnicity", ["White", "Black", "Asian", "Indian"])
     
     return {
-        "age": age,
-        "status": status,
-        "sex": sex,
-        "education": education,
-        "orientation": orientation,
-        "body_type": body_type,
-        "diet": diet,
-        "diet_routine": diet_routine,
-        "drinks_alcohol": drinks_alcohol,
-        "drugs": drugs,
-        "ethnicity": ethnicity
+        "age": agep,
+        "status": statusp,
+        "sex": sexp,
+        "education": educationp,
+        "orientation": orientationp,
+        "body_type": body_typep,
+        "diet": dietp,
+        "diet_routine": diet_routinep,
+        "drinks_alcohol": drinks_alcoholp,
+        "drugs": drugsp,
+        "ethnicity": ethnicityp
     }
 
 def calculate_match(user1, user2):
