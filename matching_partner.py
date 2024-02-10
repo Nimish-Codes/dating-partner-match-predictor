@@ -2,16 +2,16 @@ import streamlit as st
 
 def get_user_info():
     age = st.slider("Age", 18, 100, step=1)
-    status = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
-    sex = st.selectbox(prefix + "Sex", ["Male", "Female"])
-    education = st.selectbox(prefix + "Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
-    orientation = st.selectbox(prefix + "Orientation", ["Straight", "Gay", "Lesbian", "Bisexual"])
-    body_type = st.selectbox(prefix + "Body Type", ["Average", "Fit", "Athletic", "Thin", "Curvy", "Fatty", "Hamburger"])
-    diet = st.selectbox(prefix + "Diet", ["Only Veg", "Only Non-Veg", "Mostly Veg", "Mostly Non-Veg", "Mixed Balanced"])
-    diet_routine = st.selectbox(prefix + "Diet Routine", ["Anytime", "Strictly Timed"])
-    drinks_alcohol = st.selectbox(prefix + "Drinks Alcohol", ["Never", "Sometimes", "With friends or party only", "Often", "Regular"])
-    drugs = st.selectbox(prefix + "Drugs", ["Never", "Sometimes", "Regular"])
-    ethnicity = st.selectbox(prefix + "Ethnicity", ["White", "Black", "Asian", "Indian"])
+    status = st.selectbox("Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
+    sex = st.selectbox("Sex", ["Male", "Female"])
+    education = st.selectbox("Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
+    orientation = st.selectbox("Orientation", ["Straight", "Gay", "Lesbian", "Bisexual"])
+    body_type = st.selectbox("Body Type", ["Average", "Fit", "Athletic", "Thin", "Curvy", "Fatty", "Hamburger"])
+    diet = st.selectbox("Diet", ["Only Veg", "Only Non-Veg", "Mostly Veg", "Mostly Non-Veg", "Mixed Balanced"])
+    diet_routine = st.selectbox("Diet Routine", ["Anytime", "Strictly Timed"])
+    drinks_alcohol = st.selectbox("Drinks Alcohol", ["Never", "Sometimes", "With friends or party only", "Often", "Regular"])
+    drugs = st.selectbox("Drugs", ["Never", "Sometimes", "Regular"])
+    ethnicity = st.selectbox("Ethnicity", ["White", "Black", "Asian", "Indian"])
     
     return {
         "age": age,
@@ -73,7 +73,7 @@ def main():
     user1_info = get_user_info()
     
     st.write("\nNow provide your partner's information:")
-    user2_info = get_partner_info()
+    user2_info = get_partner_info("partner's")
     
     match_percentage = calculate_match(user1_info, user2_info)
     st.write(f"\nMatch Percentage: {match_percentage:.2f}%")
