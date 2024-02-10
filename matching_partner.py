@@ -82,11 +82,10 @@ def main():
 
         if match_percentage < 51:
           st.error("Have mercy on your life, run away and find another partner.")
-        for match_percentage in range(51,99):
-          st.write("Get along.")
-          break
+        elif match_percentage >= 50 and match_percentage < 100:
+            st.write("Get along.")
         if match_percentage == 100:
-          st.success("A divine match. 36=36 :-)")
+          st.success("A divine match. 36=36 😮")
 
 if __name__ == "__main__":
     main()
