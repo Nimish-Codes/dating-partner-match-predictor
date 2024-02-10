@@ -41,8 +41,8 @@ def calculate_match(user1, user2):
     return match_percentage
 
 def main():
-    st.title("Match Predictor")
-    st.write("Provide your information:")
+    st.title("Partner Match Predictor")
+    st.write("Provide your information honestly:")
     user1_info = get_user_info()
     
     st.write("\nNow provide your partner's information:")
