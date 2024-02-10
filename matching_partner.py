@@ -41,17 +41,17 @@ def get_partner_info(prefix=""):
     ethnicityp = st.selectbox(prefix + "Ethnicity", ["White", "Black", "Asian", "Indian"])
     
     return {
-        "agep": agep,
-        "statusp": statusp,
-        "sexp": sexp,
-        "educationp": educationp,
-        "orientationp": orientationp,
-        "body_typep": body_typep,
-        "dietp": dietp,
-        "diet_routinep": diet_routinep,
-        "drinks_alcoholp": drinks_alcoholp,
-        "drugsp": drugsp,
-        "ethnicityp": ethnicityp
+        "age": agep,
+        "status": statusp,
+        "sex": sexp,
+        "education": educationp,
+        "orientation": orientationp,
+        "body_type": body_typep,
+        "diet": dietp,
+        "diet_routine": diet_routinep,
+        "drinks_alcohol": drinks_alcoholp,
+        "drugs": drugsp,
+        "ethnicity": ethnicityp
     }
 
 def calculate_match(user1, user2):
