@@ -1,7 +1,7 @@
 import streamlit as st
 
 def get_user_info():
-    age = st.slider("Age", 18, 100, step=1)
+    age = st.slider("Age", 18, 100, step=1, key="one")
     status = st.selectbox("Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
     sex = st.selectbox("Sex", ["Male", "Female"])
     education = st.selectbox("Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
@@ -28,7 +28,7 @@ def get_user_info():
     }
 
 def get_partner_info(prefix=""):
-    agep = st.slider("Age", 18, 100, step=1)
+    agep = st.slider("Age", 18, 100, step=1, key="two")
     statusp = st.selectbox(prefix + "Marital Status", ["Single", "Married", "Divorced", "Already have a partner"])
     sexp = st.selectbox(prefix + "Sex", ["Male", "Female"])
     educationp = st.selectbox(prefix + "Education", ["10th", "12th", "Bachelor", "Masters", "PhD", "Uneducated"])
