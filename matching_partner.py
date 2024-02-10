@@ -84,6 +84,7 @@ def main():
           st.error("Have mercy on your life, run away and find another partner.")
         for match_percentage in range(51, 99):
           st.write("Get along.")
+            break
         if match_percentage == 100:
           st.success("A divine match. 36=36 :-)")
 
